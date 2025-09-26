@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { devtools } from 'zustand/middleware'
 
-interface AppState {
+export interface AppState {
   // UI state
   isLoading: boolean
   isSidebarOpen: boolean
@@ -9,7 +9,7 @@ interface AppState {
   notifications: Notification[]
 
   // Data cache
-  cachedData: Record<string, any>
+  cachedData: Record<string, unknown>
   lastDataFetch: Record<string, number>
 
   // Actions
@@ -23,13 +23,13 @@ interface AppState {
   clearNotifications: () => void
 
   // Data management
-  setCachedData: (key: string, data: any) => void
-  getCachedData: (key: string) => any
+  setCachedData: (key: string, data: unknown) => void
+  getCachedData: (key: string) => unknown
   clearCachedData: (key?: string) => void
   isDataStale: (key: string, maxAge?: number) => boolean
 }
 
-interface Notification {
+export interface Notification {
   id: string
   type: 'success' | 'error' | 'warning' | 'info'
   title: string
@@ -118,7 +118,7 @@ export const useAppStore = create<AppState>()(
       },
 
       // Data management
-      setCachedData: (key: string, data: any) => {
+      setCachedData: (key: string, data: unknown) => {
         set((state) => ({
           cachedData: { ...state.cachedData, [key]: data },
           lastDataFetch: { ...state.lastDataFetch, [key]: Date.now() }

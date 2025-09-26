@@ -1,8 +1,8 @@
 // Session management
-export { useSessionStore, useSession } from './sessionStore'
+import { useSessionStore } from './sessionStore'
 
 // App state management
-export { useAppStore } from './appStore'
+import { useAppStore } from './appStore'
 
 // Re-export types for convenience
 import type { User, SessionState } from './sessionStore'

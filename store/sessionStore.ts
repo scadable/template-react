@@ -1,8 +1,8 @@
-import React from 'react'
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
+import { useEffect } from "react";
 
-interface User {
+export interface User {
   id: string
   name: string
   email: string
@@ -10,7 +10,7 @@ interface User {
   role?: string
 }
 
-interface SessionState {
+export interface SessionState {
   // User state
   user: User | null
   isAuthenticated: boolean
@@ -127,7 +127,7 @@ export const useSession = () => {
   const sessionStore = useSessionStore()
 
   // Check if session is still valid on hook usage
-  React.useEffect(() => {
+  useEffect(() => {
     if (sessionStore.isAuthenticated && !sessionStore.isSessionValid()) {
       sessionStore.logout()
     }
