@@ -12,11 +12,14 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@refinedev/antd": "^6.0.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
     "@refinedev/core": "^5.0.2",
+    "@refinedev/mui": "^7.0.0",
     "@refinedev/react-router": "^2.0.1",
     "@refinedev/simple-rest": "^6.0.0",
-    "antd": "^5.27.4",
     "axios": "^1.12.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
