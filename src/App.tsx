@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { Home, Login } from './pages'
 
+// Theme configuration for Material UI
 const theme = createTheme({
   palette: {
     mode: 'light',
