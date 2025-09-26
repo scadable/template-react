@@ -1,0 +1,27 @@
+
+services:
+  web-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+      args:
+        - AUTH_SERVICE=auth.example.com
+        - FACILITY_SERVICE=facility.example.com
+        - DEVICE_SERVICE=device.example.com
+        - API_SERVICE=api.example.com
+    container_name: web-dashboard
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+    name: web-dashboard-caddy-data
+  caddy_config:
+    name: web-dashboard-caddy-config

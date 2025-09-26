@@ -1,0 +1,6 @@
+# Caddyfile
+:3000
+
+root * /srv
+file_server browse
+try_files {path} /index.html
