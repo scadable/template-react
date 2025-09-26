@@ -1,4 +1,7 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite 
+
+[![CI Build](https://github.com/scadable/template-react/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/scadable/template-react/actions/workflows/ci-build.yaml)
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
