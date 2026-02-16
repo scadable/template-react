@@ -21,7 +21,7 @@
     "@refinedev/mui": "^7.0.0",
     "@refinedev/react-router": "^2.0.1",
     "@refinedev/simple-rest": "^6.0.0",
-    "axios": "^1.12.2",
+    "axios": "^1.13.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.2",
